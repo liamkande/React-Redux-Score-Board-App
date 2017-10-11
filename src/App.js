@@ -8,17 +8,36 @@ import PropTypes from 'prop-types'
 //Main Component
 class App extends Component{
   constructor(props){
-    super(props);
-    this.state = {}
+    super(props)
+    this.state = {
+      players: []
+  }
+}
+  componentDidMount() {
+    this.setState({
+      players :[
+        {
+          name: "Liam Kande",
+          score: 14
+        },
+        {
+          name: "Dimitry Luzgin",
+          score: 16
+        }
+      ]
+    })
   }
   render() {
   const {title="Scoreboard"} = this.props
+  const {players} = this.state
     return (
       <div className="scoreboard col-md-12 col-lg-12 ">
         <Header title={title}/>
         <div className="players">
-          <Player name="Liam Kande" score={17} />
-          <Player name="Dimitry Luzgin" score={16} />
+          {players.map(
+            (player, i ) =>
+            <Player key={i} {...player} />
+          )}
         </div>
       </div>
     )
