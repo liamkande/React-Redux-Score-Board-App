@@ -18,7 +18,7 @@ class App extends Component{
       players :[
         {
           name: "Liam Kande",
-          score: 14
+          score: 17
         },
         {
           name: "Dimitry Luzgin",
