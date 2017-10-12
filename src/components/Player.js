@@ -7,7 +7,7 @@ export const Player = (props) => (
       {props.name}
     </div>
     <div className="player-score">
-      <Counter score={props.score} />
+      <Counter initialscore={props.score}/>
     </div>
   </div>
 )

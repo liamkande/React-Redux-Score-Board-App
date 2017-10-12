@@ -5,5 +5,5 @@ import 'bootstrap/dist/css/bootstrap.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App title="Liam's Scoreboard" />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()

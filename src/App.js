@@ -53,7 +53,7 @@ Player.propTypes = {
     name: PropTypes.string.isRequired
 }
 Counter.propTypes = {
-    score: PropTypes.number.isRequired
+  initialscore: PropTypes.number.isRequired
 }
 
 export default App
