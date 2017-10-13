@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 const Player = (props) =>
   <div className="player">
     <div className="player-name">
+      <a className="remove-player" onClick={props.onRemove}>X</a>
       {props.name}
     </div>
     <div className="player-score">
@@ -16,7 +17,8 @@ Player.propTypes = {
     name: PropTypes.string.isRequired,
     score: PropTypes.number.isRequired,
     onScoreChange: PropTypes.func.isRequired,
-    id:PropTypes.number.isRequired
+    id:PropTypes.number.isRequired,
+    onRemove: PropTypes.func.isRequired
 }
 Counter.propTypes = {
   onChange: PropTypes.func.isRequired
