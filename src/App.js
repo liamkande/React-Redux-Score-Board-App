@@ -52,7 +52,6 @@ this.setState({players})
   render() {
   const {title="scoreboard"} = this.props
   const {players, nextId} = this.state
-
     return (
       <div className="scoreboard col-md-12 col-lg-12 ">
         <Header title={title} players={players} />
@@ -73,6 +72,7 @@ this.setState({players})
                         score: 0,
                         id: nextId
                       });
+                      // eslint-disable-next-line
                       this.setState({id: this.state.nextId +=1}) //Temp fix should be managed with Redux
                     }}/>
       </div>
