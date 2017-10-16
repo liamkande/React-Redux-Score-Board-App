@@ -19,7 +19,7 @@ export default class Scoreboard extends Component {
         name: 'Alena Holligan',
         score: 50,
       },
-    ],
+    ]
   }
 
   onScoreChange = (index, delta) => {
