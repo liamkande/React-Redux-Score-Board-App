@@ -1,9 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import 'bootstrap/dist/css/bootstrap.css'
-//import 'bootstrap/dist/css/bootstrap-theme.css'
-import App from './App'
+import { render } from 'react-dom'
+import Scoreboard from './containers/ScoreBoard'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+render(
+  <Scoreboard />, document.getElementById('root')
+)
 registerServiceWorker()

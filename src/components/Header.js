@@ -1,19 +1,21 @@
 import React from 'react'
-import Stats from './Stats'
-import Stopwatch from './Stopwatch'
 import PropTypes from 'prop-types'
 
-const Header = (props) =>
-  <div className="header">
-    <Stats players={props.players}/>
-    <h1>{props.title}</h1>
-    <Stopwatch />
-  </div>
+import Stats from './Stats'
+import Stopwatch from './Stopwatch'
 
-Header.propTypes = {
-    title: PropTypes.string.isRequired
+const Header = props => {
+  return (
+    <div className="header">
+      <Stats players={props.players} />
+      <h1>Scoreboard</h1>
+      <Stopwatch />
+    </div>
+  )
 }
-Stats.propTypes = {
+Header.propTypes = {
   players: PropTypes.array.isRequired
 }
+
+
 export default Header

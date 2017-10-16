@@ -1,15 +1,13 @@
 {
-  "name": "score-board",
+  "name": "new-score-board",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "bootstrap-loader": "^2.2.0",
-    "css-loader": "^0.28.7",
     "react": "^16.0.0",
-    "react-bootstrap": "^0.31.3",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.14",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
