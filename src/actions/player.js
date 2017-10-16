@@ -9,7 +9,7 @@ export const addPlayer = name => {
 
 export const removePlayer = index => {
   return {
-    type: PlayerActionTypes,
+    type: PlayerActionTypes.REMOVE_PLAYER,
     index
   }
 }

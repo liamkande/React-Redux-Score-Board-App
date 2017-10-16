@@ -3,37 +3,37 @@ import * as PlayerActionTypes from '../actiontypes/player'
 const initialState = [
   {
     name: 'Liam Kande',
-    score: 17,
+    score: 17
   },
   {
-    name: 'Dimitry Luzgin ',
-    score: 16,
+    name: 'Dimitri Luzgin',
+    score: 15
   },
   {
-    name: 'Levick MBoukou',
-    score: 14,
-  },
+    name: 'Levick Mboukou',
+    score: 12
+  }
 ]
 
 export default function Player(state=initialState, action) {
-  switch (action.type) {
+  switch(action.type) {
     case PlayerActionTypes.ADD_PLAYER:
       return [
         ...state,
         {
-          name:action.name,
-          score:0
+          name: action.name,
+          score: 0
         }
-      ]
+      ];
 
     case PlayerActionTypes.REMOVE_PLAYER:
       return [
         ...state.slice(0, action.index),
         ...state.slice(action.index + 1)
-      ]
+      ];
 
     case PlayerActionTypes.UPDATE_PLAYER_SCORE:
-      return state.map((player,index) => {
+      return state.map((player, index) => {
         if(index === action.index) {
           return {
             ...player,
@@ -41,7 +41,7 @@ export default function Player(state=initialState, action) {
           }
         }
         return player
-      })
+      });
 
     default:
       return state
